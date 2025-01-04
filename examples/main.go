@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	stakeAccountAddress = "ELEtmTcPGNRrhWVRz4HQqzru6WH1D9qHgmASzd8FCYAx"
+	stakeAccountAddress = "HmbKSyhneFd1Nd8BtW7ejBHTFrbnBsVA7JE6GpA9WjiX"
 )
 
 func main() {
@@ -59,11 +59,9 @@ func main() {
 	if err != nil {
 		log.Panicf("GetStakeActivation error: %v", err)
 	}
-
 	b, err := json.MarshalIndent(r, "", "  ")
 	if err != nil {
-		fmt.Println("failed to marshal JSON:", err)
-		return
+		log.Panicf("failed to marshal JSON: %v", err)
 	}
 	fmt.Printf("GetStakeActivation: %s", string(b))
 }
