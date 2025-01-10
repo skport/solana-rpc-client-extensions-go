@@ -21,7 +21,7 @@ type StakeAccount struct {
 
 	Executable bool   `json:"executable"`
 	Lamports   uint64 `json:"lamports"`
-	Owners     string `json:"owner"`
+	Owner      string `json:"owner"`
 	RentEpoch  uint64 `json:"rentEpoch"`
 }
 
