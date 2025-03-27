@@ -1,7 +1,10 @@
 name: go-test-actions
 run-name: ${{ github.actor }} GitHub Actions
 
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: '0 0 * * 1'
 
 jobs:
   go-test:
